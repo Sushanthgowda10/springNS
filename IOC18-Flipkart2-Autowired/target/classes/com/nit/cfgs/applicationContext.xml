@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- cfgs java class as spring beans -->
+<bean id="dtdc" class="com.nit.comps.DTDC"/>
+<bean id="dhl" class="com.nit.comps.DHL" primary="true"/>
+<bean id="fpkt" class="com.nit.comps.Flipkart"/>
+
+<!--cfg Annotation related PostProccessor-->
+<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcesssor"/>
+
+	
+</beans>

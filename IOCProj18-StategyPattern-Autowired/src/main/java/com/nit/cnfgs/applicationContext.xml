@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+																					  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- cfg java class as spring beans-->
+	<!--<bean id="dart" class="com.softtek.beans.BlueDart" primary="true" />-->
+	
+	<!--<bean id="dtdc" class="com.softtek.beans.DTDC" />
+	<bean id="courier" class="com.softtek.beans.BlueDart" />
+	<bean id="fpkt" class="com.softtek.beans.Flipkart" />-->
+	
+	<!-- Cfg Annotation related PostProcessor-->
+	<!--<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />-->
+	
+	<!--<context:annotation-config/>-->
+	
+	<context:component-scan base-package="com.nit"/>
+</beans>

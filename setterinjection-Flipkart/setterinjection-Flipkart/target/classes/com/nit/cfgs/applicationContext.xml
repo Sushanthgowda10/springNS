@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dtdc" class="com.nit.beans.DTDC">
+	<property name="name" value="DTDC"/>
+	</bean>
+	<bean id="ek" class="com.nit.beans.Ekart">
+	<property name="name1" value="Ekart"/>
+	</bean>
+	
+	<bean id="dhl" class="com.nit.beans.DHL">
+	<property name="name3" value="DHL"/>
+	</bean>
+	
+	
+	<!-- Target class -->
+	<bean id="wmg" class="com.nit.beans.Flipkart">
+	<property name="orderId" value="1123"/>
+		<property name="courier" ref="ek"> </property>
+	</bean>
+	
+</beans>

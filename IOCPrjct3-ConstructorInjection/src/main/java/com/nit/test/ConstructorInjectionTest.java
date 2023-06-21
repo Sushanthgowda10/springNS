@@ -1,0 +1,29 @@
+package com.nit.test;
+
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.FileSystemResource;
+
+import com.nit.beans.WishMessageGenerator;
+
+public class ConstructorInjectionTest {
+	public static void main(String[] args) {
+		
+		//hold the name and location of spring bean configuration file in resource object
+		FileSystemResource res =new FileSystemResource("src/main/java/com/nit/cfgs/applicationContext.xml");
+		System.out.println("-----------------------------------------");
+		
+		XmlBeanFactory factory=new XmlBeanFactory(res);
+		System.out.println("-----------------------------------------");
+		
+		Object object=factory.getBean("main");
+		
+		WishMessageGenerator gem=(WishMessageGenerator)object;
+		System.out.println("-----------------------------------------");
+		
+		//invoke business method
+		String message=gem.generateMessage("Navi");
+		System.out.println("Wish Message is:: "+ message);
+		System.out.println("------------------------------------------");
+		
+	}
+}
